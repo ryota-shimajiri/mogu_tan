@@ -39,35 +39,30 @@ function start() {
 }
 
 function moveMogtan(mogu) {
-    setTimeout(function() {
-        hiddenMogutan(mogu);
-    }, Math.random() * 5 * 1000);
+    setTimeout(() => hiddenMogutan(mogu), Math.random() * 5 * 1000);
 }
 
 function onMogutan(mogu) {
-    mogu.onclick = function() {
+    mogu.onclick = () => {
         // パス最後の/を取り除き、画像名を取得する
-        let fileName = mogu.src.split('/').pop()
-        console.log(fileName);
+        let fileName = mogu.src.split('/').pop();
         if (fileName === "mogu_tan2.PNG") {
             mogu.src = "img/mogu_tan3.PNG";
             count ++;
             count_mogu = document.getElementById("count_mogu");
             count_mogu.innerHTML = count;
         }
-    }
+    };
 }
 
 // モグタンが隠れる処理
 function hiddenMogutan(mogu) {
     mogu.src = "img/mogu_tan1.PNG";
-    setTimeout(function() {
-        visibleMogutan(mogu);}, Math.random() * 5 * 1000);
+    setTimeout(() => visibleMogutan(mogu), Math.random() * 5 * 1000);
 }
 
 // モグタンが現れる処理
 function visibleMogutan(mogu) {
     mogu.src = "img/mogu_tan2.PNG";
-    setTimeout(function() {
-        hiddenMogutan(mogu);}, Math.random() * 5 * 1000);
+    setTimeout(() => hiddenMogutan(mogu), Math.random() * 5 * 1000);
 }
