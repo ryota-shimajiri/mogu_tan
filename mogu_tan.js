@@ -1,41 +1,27 @@
-let mogutan;
 let count = 0;
-let count_mogu;
+let countMogu;
+let mogus = [];
 
 window.onload = function() {
     start();
 }
 
 function start() {
-    mogu1 = document.getElementById("image_mogu1");
-    mogu2 = document.getElementById("image_mogu2");
-    mogu3 = document.getElementById("image_mogu3");
-    mogu4 = document.getElementById("image_mogu4");
-    mogu5 = document.getElementById("image_mogu5");
-    mogu6 = document.getElementById("image_mogu6");
-    mogu7 = document.getElementById("image_mogu7");
-    mogu8 = document.getElementById("image_mogu8");
-    mogu9 = document.getElementById("image_mogu9");
 
-    onMogutan(mogu1);
-    onMogutan(mogu2);
-    onMogutan(mogu3);
-    onMogutan(mogu4);
-    onMogutan(mogu5);
-    onMogutan(mogu6);
-    onMogutan(mogu7);
-    onMogutan(mogu8);
-    onMogutan(mogu9);
+    mogus.push(document.getElementById("image_mogu1"));
+    mogus.push(document.getElementById("image_mogu2"));
+    mogus.push(document.getElementById("image_mogu3"));
+    mogus.push(document.getElementById("image_mogu4"));
+    mogus.push(document.getElementById("image_mogu5"));
+    mogus.push(document.getElementById("image_mogu6"));
+    mogus.push(document.getElementById("image_mogu7"));
+    mogus.push(document.getElementById("image_mogu8"));
+    mogus.push(document.getElementById("image_mogu9"));
     
-    moveMogtan(mogu1);
-    moveMogtan(mogu2);
-    moveMogtan(mogu3);
-    moveMogtan(mogu4);
-    moveMogtan(mogu5);
-    moveMogtan(mogu6);
-    moveMogtan(mogu7);
-    moveMogtan(mogu8);
-    moveMogtan(mogu9);
+    mogus.forEach(mogu => {
+        onMogutan(mogu);
+        moveMogtan(mogu);
+    });
 }
 
 function moveMogtan(mogu) {
@@ -49,8 +35,8 @@ function onMogutan(mogu) {
         if (fileName === "mogu_tan2.PNG") {
             mogu.src = "img/mogu_tan3.PNG";
             count ++;
-            count_mogu = document.getElementById("count_mogu");
-            count_mogu.innerHTML = count;
+            countMogu = document.getElementById("countMogu");
+            countMogu.innerHTML = count;
         }
     };
 }
