@@ -31,7 +31,7 @@ function moveMogtan(mogu) {
 function onMogutan(mogu) {
     mogu.onclick = () => {
         // パス最後の/を取り除き、画像名を取得する
-        let fileName = mogu.src.split('/').pop();
+        const fileName = mogu.src.split('/').pop();
         if (fileName === "mogu_tan2.PNG") {
             mogu.src = "img/mogu_tan3.PNG";
             count ++;
