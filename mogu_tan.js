@@ -8,7 +8,7 @@ window.onload = function() {
 
 function start() {
 
-    mogus.push(document.getElementById(""));
+    mogus.push(document.getElementById("image_mogu1"));
     
     mogus.forEach(mogu => {
         onMogutan(mogu);
@@ -28,11 +28,11 @@ function onMogutan(mogu) {
 }
 
 // モグタンが隠れる処理
-function hiddenMogutan() {
+function hiddenMogutan(mogu) {
+    mogu.src = "img/mogu_tan2.PNG";
 }
 
 // モグタンが現れる処理
 function visibleMogutan() {
-    mogu.src = "img/mogu_tan2.PNG";
-    setTimeout(() => hiddenMogutan(mogu), Math.random() * 5 * 1000);
+    
 }
