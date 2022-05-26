@@ -11,28 +11,32 @@ function start() {
     mogus.push(document.getElementById("hoge"));
     
     mogus.forEach(mogu => {
-        onMogutan(mogu);
+        //onMogutan(mogu);
         moveMogtan(mogu);
     });
 }
 
 function moveMogtan(mogu) {
-    setTimeout(() => hiddenMogutan(mogu), Math.random() * 5 * 1000);
+    //0.0 以上 1.0 未満のランダムな数値を生成
+    setTimeout(() => visibleMogutan(mogu), Math.random() * 5 * 1000);
 }
 
 function onMogutan(mogu) {
     mogu.onclick = () => {
         // パス最後の/を取り除き、画像名を取得する
         const fileName = mogu.src.split('/').pop();
+        if (fileName === "") {
+            countMogu.innerHTML = count;
+        }
     };
 }
 
 // モグタンが隠れる処理
 function hiddenMogutan(mogu) {
-    mogu.src = "img/mogu_tan2.PNG";
+
 }
 
 // モグタンが現れる処理
-function visibleMogutan() {
-    
+function visibleMogutan(mogu) {
+    mogu.src = "";
 }

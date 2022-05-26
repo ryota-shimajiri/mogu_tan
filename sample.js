@@ -25,7 +25,7 @@ function start() {
 }
 
 function moveMogtan(mogu) {
-    setTimeout(() => hiddenMogutan(mogu), Math.random() * 5 * 1000);
+    setTimeout(() => visibleMogutan(mogu), Math.random() * 5 * 1000);
 }
 
 function onMogutan(mogu) {
