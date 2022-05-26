@@ -8,7 +8,7 @@ window.onload = function() {
 
 function start() {
 
-    mogus.push(document.getElementById("image_mogu1"));
+    mogus.push(document.getElementById("hoge"));
     
     mogus.forEach(mogu => {
         onMogutan(mogu);
